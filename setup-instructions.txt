@@ -1,0 +1,61 @@
+Make CentOS 7 VM with ~4CPU 8GB RAM
+e.g.
+Linode 8GB
+$40/mo ($0.06/hr)
+4 CPU, 160GB Storage, 8GB RAM
+
+----
+
+[boot VM]
+
+yum install docker
+
+#enable start on boot
+systemctl enable docker
+
+#replace [x] with latest number
+docker pull floodspark/elk:v[x]
+
+docker network create -d bridge backend
+
+#needed by elastic
+nano /etc/sysctl.conf
+
+add: vm.max_map_count=262144
+
+[save change]
+
+sysctl -p
+
+#replace [x] with latest number. 
+#This takes a while to boot and may cause errors with subsequent p0f and/or filebeat boots due to inability to connect to ports
+docker run -e ES_CONNECT_RETRY=300 -d --name elk --network=backend floodspark/elk:v[x]
+
+#replace [x] with latest number
+docker pull floodspark/p0f:v[x]
+
+mkdir /var/tmp/p0f
+
+#replace [x] with latest number and -i flag value with listening interface
+#choose one of these two:
+docker run --network=host --name p0f -u root -v /var/tmp/p0f:/tmp/p0f:z -d floodspark/p0f:v[x] /opt/p0f/p0f -i eth0 -o /tmp/p0f/p0f.log
+#or
+docker run --network=host --name p0f -v /var/tmp/p0f:/tmp/p0f/ -d floodspark/p0f:v[x] /opt/p0f/p0f -i eth0 -o /tmp/p0f/p0f.log
+
+#replace [x] with latest number
+docker pull floodspark/filebeat:v[x]
+
+#replace [x] with latest number
+docker run -d --name=filebeat --network=backend -v /var/tmp/p0f:/tmp/p0f/ floodspark/filebeat:v[x] filebeat
+
+#nginx stuff here
+docker pull floodspark/nginx:v[x]
+
+docker run -d --name nginx --network=backend -p 80:80 floodspark/nginx:v[x]
+
+
+---
+
+#check status of all containers
+docker ps -a
+
