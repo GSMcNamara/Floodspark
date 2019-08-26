@@ -51,11 +51,10 @@ docker run -d --name=filebeat --network=backend -v /var/tmp/p0f:/tmp/p0f/ floods
 #nginx stuff here
 docker pull floodspark/nginx:v[x]
 
-docker run -d --name nginx --network=backend -p 80:80 floodspark/nginx:v[x]
+docker run -d --name nginx --network=backend -p 80:80 -p 443:443 floodspark/nginx:v[x]
 
 
 ---
 
 #check status of all containers
 docker ps -a
-
