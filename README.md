@@ -6,9 +6,9 @@ Floodspark™ helps you record, block, or sandbox reconnaissance or otherwise il
 
 **More coming soon!**
 
-Demo: http://demo.floodspark.com/
-More information and FAQs: http://floodspark.com/
-Contact: floodspark_gmail_com
-Updates: https://twitter.com/Floodspark
+Demo: http://demo.floodspark.com/  
+More information and FAQs: http://floodspark.com/  
+Contact: floodspark_gmail_com  
+Updates: https://twitter.com/Floodspark  
 
 As far as license, the TL;DR is please use this for personal or research use. We welcome feedback and improvements. Please do NOT use this commercially or for profit. Full license here: https://github.com/GSMcNamara/floodspark/blob/master/LICENSE.md
