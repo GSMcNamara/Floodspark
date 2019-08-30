@@ -6,6 +6,7 @@ Floodspark™ helps you record, block, or sandbox reconnaissance or otherwise il
 
 **More coming soon!**
 
+Installation (not ready): https://github.com/GSMcNamara/floodspark/wiki/Installation  
 Demo: http://demo.floodspark.com/  
 More information and FAQs: http://floodspark.com/  
 Contact: floodspark_gmail_com  
