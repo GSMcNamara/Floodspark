@@ -19,4 +19,4 @@ Updates: https://twitter.com/Floodspark
 
 As far as license, the TL;DR is please use this for personal or research use. We welcome feedback and improvements. Please do NOT use this commercially or for profit. Full license here: https://github.com/GSMcNamara/floodspark/blob/master/LICENSE.md  
   
-*"People don't change their minds; they may make a new decision based on additional information."*
+*"People don't change their minds; they make a new decision based on additional information."*
