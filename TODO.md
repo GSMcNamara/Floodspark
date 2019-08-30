@@ -13,3 +13,6 @@
 - [ ] Persistent tracking (etag, etc)
 - [ ] Server/webapp-specific targeted attacks based on real or falsified information
 - [ ] Stolen cookie detection
+- [ ] Research and provide sandboxing options
+- [ ] Research SIEM integration
+- [ ] Research and implement easy update solution
