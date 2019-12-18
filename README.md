@@ -14,7 +14,7 @@ Floodspark development is sponsored by GS McNamara LLC.
 
 Demo (under construction): http://demo.floodspark.com/  
 More information and FAQs: http://floodspark.com/  
-Contact: gs_floodspark_com 
+Contact: gs_floodspark_com  
 Updates: https://twitter.com/Floodspark  
 
 As far as license, the TL;DR is please use this for personal or research use. We welcome feedback and improvements. Please do NOT use this commercially or for profit. Full license here: https://github.com/GSMcNamara/floodspark/blob/master/LICENSE.md  
