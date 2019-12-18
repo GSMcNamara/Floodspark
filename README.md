@@ -4,7 +4,7 @@ Floodspark™ helps you record, block, or sandbox reconnaissance or otherwise il
 
 Increase performance, reduce fraud, thwart attacks, and serve your real customers.  
 
-To get started follow the [installation instructions (not ready)](https://github.com/GSMcNamara/floodspark/wiki/Installation)  
+To get started follow the [installation instructions](https://github.com/GSMcNamara/floodspark/wiki/Installation)  
 
 Feedback about features and functionality would be awesome. Development contributions would be even more awesome.  
 
