@@ -1,0 +1,106 @@
+version: '2.3'
+
+networks:
+  backend:
+    name: backend
+
+services:
+
+# Tanner Redis Service
+  tanner_redis:
+    build: ./redis
+    container_name: tanner_redis
+    restart: always
+    stop_signal: SIGKILL
+    tty: true
+    networks:
+     - backend
+    image: "floodspark/tanner_redis:v1"
+    read_only: true
+
+# PHP Sandbox service
+  tanner_phpox:
+    build: ./phpox
+    container_name: tanner_phpox
+    restart: always
+    stop_signal: SIGKILL
+    tty: true
+    networks:
+     - backend
+    image: "floodspark/tanner_phpox:v1"
+    read_only: true
+
+# Tanner API Service
+  tanner_api:
+    build: ./tanner
+    container_name: tanner_api
+    restart: always
+    stop_signal: SIGKILL
+    tmpfs:
+     - /tmp/tanner:uid=2000,gid=2000
+    tty: true
+    networks:
+     - backend
+    image: "floodspark/tanner:v2"
+    read_only: true
+    volumes:
+     - /data/tanner/log:/var/log/tanner
+    command: tannerapi 
+    depends_on:
+     - tanner_redis
+
+# Tanner WEB Service
+  tanner_web:
+    build: ./tanner
+    container_name: tanner_web
+    restart: always
+    stop_signal: SIGKILL
+    tmpfs:
+     - /tmp/tanner:uid=2000,gid=2000
+    tty: true
+    networks:
+     - backend
+    image: "floodspark/tanner:v2"
+    command: tannerweb
+    read_only: true
+    volumes:
+     - /data/tanner/log:/var/log/tanner
+    depends_on:
+     - tanner_redis
+
+# Tanner Service
+  tanner:
+    build: ./tanner
+    container_name: tanner
+    restart: always
+    stop_signal: SIGKILL
+    tmpfs:
+     - /tmp/tanner:uid=2000,gid=2000
+    tty: true
+    networks:
+     - backend
+    image: "floodspark/tanner:v2"
+    command: tanner
+    read_only: true
+    volumes:
+     - /data/tanner/log:/var/log/tanner
+     - /data/tanner/files:/opt/tanner/files
+    depends_on:
+     - tanner_api
+     - tanner_web
+     - tanner_phpox
+
+# Snare Service
+  snare:
+    build: ./snare
+    container_name: snare
+    restart: always
+    stop_signal: SIGKILL
+    tty: true
+    networks:
+     - backend
+#    ports:
+#     - "800:80"
+    image: "floodspark/snare:v2"
+    depends_on:
+     - tanner
