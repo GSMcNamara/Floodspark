@@ -99,8 +99,6 @@ services:
     tty: true
     networks:
      - backend
-#    ports:
-#     - "800:80"
     image: "floodspark/snare:v2"
     depends_on:
      - tanner
