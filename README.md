@@ -13,4 +13,4 @@ Increase performance, reduce fraud, thwart attacks, and serve your real customer
 Email: gs_floodspark_com  
 [Twitter updates](https://twitter.com/Floodspark)  
 
-As far as license, the TL;DR is please use this for personal or research use. We welcome feedback and improvements. Please do NOT use this commercially or for profit. Full text here: https://github.com/GSMcNamara/floodspark/blob/master/LICENSE.md 
+As far as license, the TL;DR is please use this for personal or research use. We welcome feedback and improvements. Please do NOT use this commercially or for profit. Full text here: https://github.com/GSMcNamara/floodspark/blob/master/LICENSE.md. Please email about commercial licensing and support: gs_floodspark_com. 
