@@ -1,6 +1,6 @@
 <h1>Floodspark Counterespionage Firewall (CEF)</h1>
 
-Floodspark™ helps you record, block, or sandbox reconnaissance or otherwise illegitimate traffic. As a full-stack sensor Floodspark can help protect your websites, web applications, and APIs using more than just web traffic analysis. Using [Indicators of Intent™ (IOIs)](http://indicatorsofintent.com), Floodspark can detect and protect earlier than an Indicators of Compromise (IoCs) or IP blacklist-based solution.
+Floodspark™ helps you record, block, or sandbox reconnaissance or otherwise illegitimate traffic. As a full-stack sensor Floodspark can help protect your websites, web applications, and APIs using more than just web traffic analysis. Using Indicators of Intent™ (IOIs), Floodspark can detect and protect earlier than an Indicators of Compromise (IoCs) or IP blacklist-based solution.
 
 Increase performance, reduce fraud, thwart attacks, and serve your real customers.  
 
