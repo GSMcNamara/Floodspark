@@ -2,7 +2,7 @@
 
 CEF helps you record and block or honeypot reconnaissance or otherwise illegitimate traffic. CEF is like a web application firewall (WAF) but protects against reconnaissance. As a full-stack sensor CEF can help protect your websites, web applications, and APIs using more than just web traffic analysis. Using Indicators of Intent (IOIs), CEF can detect and protect earlier than an Indicators of Compromise (IoCs) or IP blacklist-based solution. Increase performance, reduce fraud, thwart attacks, and serve your real customers.  
 
-CEF is free for personal/research use. For commercial licensing please contact gs@floodspark.com.  
+CEF is free for personal/research use. [Commercial licensing](http://floodspark.com/pro.html).  
 
 [Install](https://github.com/GSMcNamara/floodspark/wiki/Installation)  
 [Demo](http://floodspark.com/#demo)  
