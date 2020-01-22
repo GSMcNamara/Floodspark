@@ -10,5 +10,4 @@ CEF is free for personal/research use. For commercial licensing please contact g
 Email: gs@floodspark.com  
 [Twitter](https://twitter.com/Floodspark)  
 [License](https://github.com/GSMcNamara/floodspark/blob/master/LICENSE.md)
-
 ![Floodspark logo](https://repository-images.githubusercontent.com/202436712/46ff7f80-c4cd-11e9-880e-07b6fc862c32)
