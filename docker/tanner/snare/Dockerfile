@@ -20,7 +20,7 @@ RUN sed -i 's/dl-cdn/dl-2/g' /etc/apk/repositories && \
     python3 setup.py install && \
     cd / && \
     rm -rf /opt/snare && \
-    clone --target http://floodspark.com && \
+    clone --target http://example.com && \
     mv /root/dist/pages/* /opt/snare/pages/ && \
 #   
 # Clean up
@@ -34,4 +34,4 @@ RUN sed -i 's/dl-cdn/dl-2/g' /etc/apk/repositories && \
 #
 # Start snare
 STOPSIGNAL SIGKILL
-CMD snare --tanner tanner --debug true --no-dorks true --auto-update false --host-ip 0.0.0.0 --port 80 --page-dir floodspark.com
+CMD snare --tanner tanner --debug true --no-dorks true --auto-update false --host-ip 0.0.0.0 --port 80 --page-dir example.com
