@@ -7,8 +7,8 @@ ip = ngx.var.remote_addr
 
 if fs_functions.check_list(ip) ~= "white" then
 	output_json = {}
-	uas = string.lower(ngx.var.http_user_agent)
-	if (ngx.var.http_user_agent ~= nil and check ~= "white") then
+	if (ngx.var.http_user_agent ~= nil) then
+		uas = string.lower(ngx.var.http_user_agent)
         	if string.match(uas, "google") then
 			real = fs_functions.confirm_googlebot(ip)
 			if real == false then
