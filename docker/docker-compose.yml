@@ -1,0 +1,22 @@
+version: "3.8"
+services:
+  resty:
+    build: ./resty
+    container_name: resty
+    ports:
+      - "80:80"
+      - "443:443"
+    networks:
+      - backend
+
+  elk:
+    build: ./elk
+    container_name: elk
+    environment:
+      - ES_CONNECT_RETRY=300
+    networks:
+      - backend
+
+networks:
+  backend:
+
