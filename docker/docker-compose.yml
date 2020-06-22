@@ -17,6 +17,13 @@ services:
     networks:
       - backend
 
+  p0f:
+    build: ./p0f
+    container_name: p0f
+    volumes:
+      - "./p0f/logs:/tmp/p0f"
+    network_mode: "host"
+
 networks:
   backend:
 
