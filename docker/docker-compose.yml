@@ -21,9 +21,25 @@ services:
     build: ./p0f
     container_name: p0f
     volumes:
-      - "./p0f/logs:/tmp/p0f"
+      - p0f_data:/tmp/p0f
     network_mode: "host"
+
+  filebeat:
+    build: ./filebeat
+    container_name: filebeat
+    volumes:
+      - p0f_data:/tmp/p0f
+    networks:
+      - backend
+
+  redis:
+    build: ./redis
+    container_name: redis
+    networks:
+      - backend
 
 networks:
   backend:
 
+volumes:
+  p0f_data:
