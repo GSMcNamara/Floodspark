@@ -17,20 +17,20 @@ services:
     networks:
       - backend
 
-  p0f:
-    build: ./p0f
-    container_name: p0f
-    volumes:
-      - p0f_data:/tmp/p0f
-    network_mode: "host"
+#  p0f:
+#    build: ./p0f
+#    container_name: p0f
+#    volumes:
+#      - p0f_data:/tmp/p0f
+#    network_mode: "host"
 
-  filebeat:
-    build: ./filebeat
-    container_name: filebeat
-    volumes:
-      - p0f_data:/tmp/p0f
-    networks:
-      - backend
+#  filebeat:
+#    build: ./filebeat
+#    container_name: filebeat
+#    volumes:
+#      - p0f_data:/tmp/p0f
+#    networks:
+#      - backend
 
   redis:
     build: ./redis
@@ -41,5 +41,5 @@ services:
 networks:
   backend:
 
-volumes:
-  p0f_data:
+#volumes:
+#  p0f_data:
