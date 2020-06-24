@@ -1,2 +1,2 @@
-/docker/tanner/snare/dist/pages/*
+#/docker/tanner/snare/dist/pages/*
 .DS_STORE
