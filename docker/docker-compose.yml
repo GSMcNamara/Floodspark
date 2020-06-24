@@ -18,6 +18,8 @@ services:
       - ES_CONNECT_RETRY=300
     networks:
       - backend
+    depends_on:
+      - resty
 
 #  p0f:
 #    build: ./p0f
