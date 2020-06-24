@@ -1,0 +1,22 @@
+version: '3.8'
+
+networks:
+#  snare_local:
+  backend:
+
+services:
+
+# Snare service
+  snare:
+    build: ./snare
+    container_name: snare
+    restart: always
+    stop_signal: SIGKILL
+    tty: true
+    networks:
+#     - snare_local
+     - backend
+    ports:
+#     - "80:80"
+     - "8080:80"
+    image: "mushorg/snare:latest"

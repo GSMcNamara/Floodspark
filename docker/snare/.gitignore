@@ -1,0 +1,18 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+.pytest_cache/
+*.py[cod]
+*$py.class
+.coverage
+
+# Sphinx documentation
+docs/_build/
+
+# Developer
+.idea/
+.venv
+.vscode
+
+Snare.egg-info/
+build/
+dist/

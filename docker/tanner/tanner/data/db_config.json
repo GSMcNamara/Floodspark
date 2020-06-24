@@ -1,0 +1,15 @@
+{
+  "name": "test1",
+  "tables": [
+    {
+      "table_name": "users",
+      "schema": "CREATE TABLE users (id INTEGER PRIMARY KEY, username text, email text, password text);",
+      "data_tokens": "I,L,E,P"
+    },
+    {
+      "table_name": "comments",
+      "schema": "CREATE TABLE comments (comment_id INTEGER PRIMARY KEY, comment text);",
+      "data_tokens": "I,T"
+    }
+  ]
+}
