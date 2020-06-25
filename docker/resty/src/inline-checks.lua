@@ -30,8 +30,9 @@ if fs_functions.check_list(ip) ~= "white" then
 	--be wary of below because it just checks if output_json was populated...
 	--with ANYTHING. If populated, it's assumed it has data about a baddie
 	if next(output_json) ~= nil then
-        	output_json = cjson.encode(output_json)
-		ngx.log(ngx.STDERR, output_json)
+		output_json["original_request_headers"] = ngx.req.get_headers()
+		output_json = cjson.encode(output_json)
+		--ngx.log(ngx.STDERR, output_json)
 
 	-- abandoned below because of HTTP2 issue known to Resty folks
 	--      res = ngx.location.capture(
