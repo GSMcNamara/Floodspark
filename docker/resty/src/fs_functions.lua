@@ -104,11 +104,17 @@ end
 
 function fs_functions.add_context(output_json)
 	output_json["original_request_headers"] = ngx.req.get_headers()
-	output_json["original_request_headers"]["raw"] = ngx.req.raw_header()
+	--workaround because HTTP/2 not supported yet: https://github.com/openresty/lua-nginx-module#ngxreqraw_header
+	if ngx.req.http_version() ~= 2.0 then
+		output_json["original_request_headers"]["raw"] = ngx.req.raw_header()
+	end
 	output_json["original_request_headers"]["http_version"] = ngx.req.http_version()
 	output_json["original_request_headers"]["method"] = ngx.req.get_method()
 	output_json["original_request_headers"]["uri_args"] = ngx.req.get_uri_args()
 	output_json["original_request_headers"]["ip_address"] = ngx.var.remote_addr
+-- use below instead of line above in order to not disclose IP addresses of your visitors for public demos, etc.
+--	output_json["original_request_headers"]["ip_address"] = "123.123.123.123"
+
 	return output_json
 end
 
