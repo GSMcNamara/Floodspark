@@ -112,8 +112,6 @@ function fs_functions.add_context(output_json)
 	output_json["original_request_headers"]["method"] = ngx.req.get_method()
 	output_json["original_request_headers"]["uri_args"] = ngx.req.get_uri_args()
 	output_json["original_request_headers"]["ip_address"] = ngx.var.remote_addr
--- use below instead of line above in order to not disclose IP addresses of your visitors for public demos, etc.
---	output_json["original_request_headers"]["ip_address"] = "123.123.123.123"
 
 	return output_json
 end
